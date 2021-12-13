@@ -28,6 +28,7 @@ const WelcomeScreen = () => {
     </ImageBackground>
   );
 };
+export default WelcomeScreen;
 
 const styles = StyleSheet.create({
   backgroundImage: {
@@ -61,5 +62,3 @@ const styles = StyleSheet.create({
     backgroundColor: "#4ECDC4",
   },
 });
-
-export default WelcomeScreen;

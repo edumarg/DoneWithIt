@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  View,
-  ImageBackground,
-  Text,
-  StyleSheet,
-  Image,
-  SafeAreaView,
-} from "react-native";
+import { View, ImageBackground, Text, StyleSheet, Image } from "react-native";
+
+import colors from "../config/colors";
 
 const WelcomeScreen = () => {
   return (
@@ -39,7 +34,7 @@ const styles = StyleSheet.create({
   loginButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
   },
   logo: {
     width: 100,
@@ -51,7 +46,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoText: {
-    color: "black",
+    color: colors.black,
     fontSize: 15,
     fontWeight: "bold",
     textAlign: "center",
@@ -59,6 +54,6 @@ const styles = StyleSheet.create({
   signinButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#4ECDC4",
+    backgroundColor: colors.secondary,
   },
 });

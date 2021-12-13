@@ -13,6 +13,9 @@ web-build/
 # macOS
 .DS_Store
 
+# VS code
+.vscode
+
 # Logs
 logs
 *.log

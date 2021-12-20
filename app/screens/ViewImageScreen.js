@@ -11,7 +11,7 @@ function ViewImageScreen(props) {
         style={styles.closeIcon}
         onPress={() => console.log("close")}
       >
-        <MaterialCommunityIcons name="close" size={50} color="white" />
+        <MaterialCommunityIcons name="close" size={35} color="white" />
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.deleteIcon}
@@ -19,7 +19,7 @@ function ViewImageScreen(props) {
       >
         <MaterialCommunityIcons
           name="trash-can-outline"
-          size={50}
+          size={35}
           color="white"
         />
       </TouchableOpacity>

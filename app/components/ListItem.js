@@ -1,10 +1,10 @@
 import React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Image, Text, StyleSheet } from "react-native";
 import colors from "../config/colors";
 
-function AppCard({ title, subtitle, image }) {
+function ListItem({ image, title, subtitle }) {
   return (
-    <View style={styles.card}>
+    <View style={styles.listItem}>
       <Image source={image} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{title}</Text>
@@ -15,11 +15,9 @@ function AppCard({ title, subtitle, image }) {
 }
 
 const styles = StyleSheet.create({
-  card: {
-    backgroundColor: colors.white,
-    borderRadius: 15,
-    marginBottom: 20,
-    overflow: "hidden",
+  listItem: {
+    flexDirection: "row",
+    marginHorizontal: 10,
   },
   title: {
     color: colors.black,
@@ -27,20 +25,20 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 5,
   },
-  textContainer: {
-    padding: 10,
-  },
+  textContainer: { padding: 10 },
   subtitle: {
-    color: colors.secondary,
+    color: colors.medium,
     alignContent: "flex-start",
     fontWeight: "bold",
   },
   image: {
-    width: "100%",
-    height: 200,
+    width: 70,
+    height: 70,
     justifyContent: "center",
     alignContent: "center",
+    borderRadius: 35,
+    marginRight: 5,
   },
 });
 
-export default AppCard;
+export default ListItem;

@@ -1,16 +1,27 @@
 import React from "react";
-import { View, Image, Text, StyleSheet } from "react-native";
+import {
+  TouchableHighlight,
+  View,
+  Image,
+  Text,
+  StyleSheet,
+} from "react-native";
+import Swipeable from "react-native-gesture-handler/Swipeable"; // expo install react-native-gesture-handler
 import colors from "../config/colors";
 
-function ListItem({ image, title, subtitle }) {
+function ListItem({ image, title, subtitle, onPress, renderRightActions }) {
   return (
-    <View style={styles.listItem}>
-      <Image source={image} style={styles.image} />
-      <View style={styles.textContainer}>
-        <Text style={styles.title}>{title}</Text>
-        <Text style={styles.subtitle}>{subtitle}</Text>
-      </View>
-    </View>
+    <Swipeable renderRightActions={renderRightActions}>
+      <TouchableHighlight onPress={onPress} underlayColor={colors.light}>
+        <View style={styles.listItem}>
+          <Image source={image} style={styles.image} />
+          <View style={styles.textContainer}>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.subtitle}>{subtitle}</Text>
+          </View>
+        </View>
+      </TouchableHighlight>
+    </Swipeable>
   );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Image, TouchableHighlight, StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons"; //npm @expo/vector-icons
 import Screen from "../components/Screen";
 
@@ -8,13 +8,13 @@ import colors from "../config/colors";
 function ViewImageScreen(props) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity
+      <TouchableHighlight
         style={styles.closeIcon}
         onPress={() => console.log("close")}
       >
         <MaterialCommunityIcons name="close" size={35} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity
+      </TouchableHighlight>
+      <TouchableHighlight
         style={styles.deleteIcon}
         onPress={() => console.log("Delete")}
       >
@@ -23,7 +23,7 @@ function ViewImageScreen(props) {
           size={35}
           color="white"
         />
-      </TouchableOpacity>
+      </TouchableHighlight>
       <Image
         source={require("../assets/chair.jpg")}
         style={styles.image}

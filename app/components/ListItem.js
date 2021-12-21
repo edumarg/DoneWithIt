@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   listItem: {
     flexDirection: "row",
     marginHorizontal: 10,
+    padding: 15,
   },
   title: {
     color: colors.black,

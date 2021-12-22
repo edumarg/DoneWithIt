@@ -7,5 +7,5 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
-  return <MessagesScreen />;
+  return <ViewImageScreen />;
 }

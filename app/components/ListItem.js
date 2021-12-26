@@ -9,12 +9,26 @@ import {
 import Swipeable from "react-native-gesture-handler/Swipeable"; // expo install react-native-gesture-handler
 import colors from "../config/colors";
 
-function ListItem({ image, title, subtitle, onPress, renderRightActions }) {
+function ListItem({
+  image,
+  icon,
+  title,
+  subtitle,
+  onPress,
+  renderRightActions,
+  style,
+}) {
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight onPress={onPress} underlayColor={colors.light}>
         <View style={styles.listItem}>
-          <Image source={image} style={styles.image} />
+          {image ? (
+            <Image source={image} style={[styles.image, style]} />
+          ) : icon ? (
+            icon
+          ) : (
+            ""
+          )}
           <View style={styles.textContainer}>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.subtitle}>{subtitle}</Text>
@@ -30,6 +44,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginHorizontal: 10,
     padding: 15,
+    backgroundColor: colors.white,
   },
   title: {
     color: colors.black,

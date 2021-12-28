@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, TextInput, StyleSheet, Platform } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import colors from "../config/colors";
+import defaultStyles from "../config/styles";
 
 function AppTextInput({ iconName, iconSize, iconColor, ...rest }) {
   const [myInput, setMyInput] = useState("");
@@ -12,6 +13,7 @@ function AppTextInput({ iconName, iconSize, iconColor, ...rest }) {
           name={iconName}
           size={iconSize}
           color={iconColor}
+          style={styles.icon}
         />
       )}
 
@@ -35,10 +37,6 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 10,
   },
-  textInput: {
-    color: colors.dark,
-    fontSize: 18,
-    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-    marginLeft: 10,
-  },
+  icon: { marginRight: 10 },
+  textInput: defaultStyles.textInput,
 });
